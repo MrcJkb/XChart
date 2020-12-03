@@ -145,7 +145,11 @@
         <configuration>
           <archive>
             <manifestEntries>
+<<<<<<< HEAD
               <Automatic-Module-Name>knowm.xchart</Automatic-Module-Name>
+=======
+              <Automatic-Module-Name>org.knowm.xchart</Automatic-Module-Name>
+>>>>>>> mrcjkb/issue#533
             </manifestEntries>
           </archive>
         </configuration>
