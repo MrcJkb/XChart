@@ -4,8 +4,8 @@
 
   <parent>
     <groupId>org.knowm.xchart</groupId>
-    <artifactId>xchart-parent-vs</artifactId>
-    <version>3.6.7.1</version>
+    <artifactId>xchart-parent</artifactId>
+    <version>3.8.1.1</version>
   </parent>
 
   <artifactId>xchart-vs</artifactId>
