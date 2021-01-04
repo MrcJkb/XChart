@@ -759,15 +759,18 @@ public abstract class Styler {
   }
 
   /**
-   * Sets auto-detection colors for chart annotations.
-   * If the series background color is dark, the light annotation color is drawn.
-   * If the series background color is light, the dark annotation color is drawn.
+   * Sets auto-detection colors for chart annotations. If the series background color is dark, the
+   * light annotation color is drawn. If the series background color is light, the dark annotation
+   * color is drawn.
+   *
    * @param annotationsDarkFontColor the dark color to draw on series with a light background
    * @param annotationsLightFontColor the light color to draw on series with a dark background
    * @return this styler
    */
-  public Styler setAnnotationsAutodetectColors(Color annotationsDarkFontColor, Color annotationsLightFontColor) {
-    this.annotationsFontColorDetector = new FontColorDetector(annotationsDarkFontColor, annotationsLightFontColor);
+  public Styler setAnnotationsAutodetectColors(
+      Color annotationsDarkFontColor, Color annotationsLightFontColor) {
+    this.annotationsFontColorDetector =
+        new FontColorDetector(annotationsDarkFontColor, annotationsLightFontColor);
     return this;
   }
 
@@ -968,12 +971,14 @@ public abstract class Styler {
     }
 
     public Color getFontColor(Color backgroundColor) {
-      double backgroundColorPerceivedBrightness = Math.sqrt(
-              Math.pow(backgroundColor.getRed(), 2) * RED_FACTOR +
-                      Math.pow(backgroundColor.getGreen(), 2) * GREEN_FACTOR +
-                      Math.pow(backgroundColor.getBlue(), 2) * BLUE_FACTOR
-      );
-      return backgroundColorPerceivedBrightness < BRIGHTNESS_THRESHOLD ? lightForegroundColor : darkForegroundColor;
+      double backgroundColorPerceivedBrightness =
+          Math.sqrt(
+              Math.pow(backgroundColor.getRed(), 2) * RED_FACTOR
+                  + Math.pow(backgroundColor.getGreen(), 2) * GREEN_FACTOR
+                  + Math.pow(backgroundColor.getBlue(), 2) * BLUE_FACTOR);
+      return backgroundColorPerceivedBrightness < BRIGHTNESS_THRESHOLD
+          ? lightForegroundColor
+          : darkForegroundColor;
     }
   }
 }
