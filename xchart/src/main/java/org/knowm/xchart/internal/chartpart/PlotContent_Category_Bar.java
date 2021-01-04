@@ -327,7 +327,8 @@ public class PlotContent_Category_Bar<ST extends CategoryStyler, S extends Categ
           // }
 
           if (stylerCategory.hasAnnotations() && next != null) {
-            drawAnnotations(g, next, xOffset, yOffset, zeroOffset, barWidth, false, series.getFillColor());
+            drawAnnotations(
+                g, next, xOffset, yOffset, zeroOffset, barWidth, false, series.getFillColor());
           }
           if (stylerCategory.hasAnnotations()
               && stylerCategory.isShowTotalAnnotations()
@@ -337,7 +338,15 @@ public class PlotContent_Category_Bar<ST extends CategoryStyler, S extends Categ
                 accumulatedStackOffsetPos[categoryCounter - 1]
                     - accumulatedStackOffsetNeg[categoryCounter - 1];
             double totalYOffset = accumulatedStackOffsetTotalYOffset[categoryCounter - 1];
-            drawAnnotations(g, totalNext, xOffset, totalYOffset, zeroOffset, barWidth, true, series.getFillColor());
+            drawAnnotations(
+                g,
+                totalNext,
+                xOffset,
+                totalYOffset,
+                zeroOffset,
+                barWidth,
+                true,
+                series.getFillColor());
           }
         } else if (CategorySeriesRenderStyle.Stick.equals(
             series.getChartCategorySeriesRenderStyle())) {

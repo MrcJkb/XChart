@@ -71,11 +71,9 @@ public abstract class Styler {
   private boolean hasAnnotations = false; // set by subclass
   private Font annotationsFont;
   private Color annotationsFontColor;
-<<<<<<< HEAD
+
   private FontColorDetector annotationsFontColorDetector;
-=======
-  // TODO move defaults to theme
->>>>>>> master
+
   private int annotationsRotation = 0;
   private float annotationsPosition = 0.5f;
   private boolean showTotalAnnotations = false;
