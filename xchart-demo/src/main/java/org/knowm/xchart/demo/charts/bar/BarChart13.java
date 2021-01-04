@@ -1,11 +1,10 @@
 package org.knowm.xchart.demo.charts.bar;
 
+import java.awt.*;
 import org.knowm.xchart.CategoryChart;
 import org.knowm.xchart.CategoryChartBuilder;
 import org.knowm.xchart.SwingWrapper;
 import org.knowm.xchart.demo.charts.ExampleChart;
-
-import java.awt.*;
 
 /**
  * Stacked Bar Chart with annotation color auto detection
@@ -44,7 +43,6 @@ public class BarChart13 implements ExampleChart<CategoryChart> {
     chart.getStyler().setStacked(true);
     chart.getStyler().setHasAnnotations(true);
     chart.getStyler().setAnnotationsAutodetectColors(Color.BLACK, Color.WHITE);
-
 
     // Series
     chart.addSeries("males", new int[] {10, 20, 30, 40}, new int[] {40, -30, -20, -60});
