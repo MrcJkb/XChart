@@ -4,11 +4,11 @@
 
   <parent>
     <groupId>org.knowm.xchart</groupId>
-    <artifactId>xchart-parent</artifactId>
-    <version>3.8.1-SNAPSHOT</version>
+    <artifactId>xchart-parent-vs</artifactId>
+    <version>3.8.0.1</version>
   </parent>
 
-  <artifactId>xchart</artifactId>
+  <artifactId>xchart-vs</artifactId>
 
   <name>XChart</name>
   <description>The core XChart library</description>
